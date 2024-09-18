@@ -1,9 +1,14 @@
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { useScroll, useMotionValueEvent } from "framer-motion";
-import { MaxWidthWrapper } from "./MaxWidthWrapper";
 
-export const Navbar = ( ) => {
+import { Logo } from "@/components/Logo";
+import { MaxWidthWrapper } from "./MaxWidthWrapper";
+import { ModeToggle } from "./ModeToggle";
+import { FaGithub } from "react-icons/fa";
+
+
+export const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const { scrollY } = useScroll();
 
@@ -20,6 +25,14 @@ export const Navbar = ( ) => {
         )}>
             <MaxWidthWrapper>
                 <nav className="flex items-center justify-between">
+                    <Logo />
+                    <ul className="ml-auto flex items-center gap-4">
+                        {/* Search */}
+                        <button />
+                        <FaGithub className="size-5" />
+                        <ModeToggle />
+                        
+                    </ul>
                 </nav>
             </MaxWidthWrapper>
         </header>
