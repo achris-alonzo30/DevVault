@@ -1,19 +1,18 @@
 "use client";
 
 
-import React, { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import {
   motion,
   animate,
   useMotionValue,
   useMotionTemplate,
 } from "framer-motion";
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { FiArrowRight } from "react-icons/fi";
-
 
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
@@ -28,7 +27,7 @@ export default function Home () {
       repeat: Infinity,
       repeatType: "mirror",
     });
-  }, []);
+  }, [color]);
 
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;

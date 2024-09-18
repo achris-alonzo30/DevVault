@@ -1,6 +1,6 @@
 export default function Explore() {
     return (
-        <div>
+        <div className="w-full h-full">
             {/* navbar */}
             {/* sidebar */}
             {/* main */}
