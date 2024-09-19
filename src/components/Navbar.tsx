@@ -3,10 +3,10 @@ import { useState } from "react";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 
 import { Logo } from "@/components/Logo";
-import { MaxWidthWrapper } from "./MaxWidthWrapper";
 import { ModeToggle } from "./ModeToggle";
 import { FaGithub } from "react-icons/fa";
-
+import { SearchCommand } from "./SearchCommand";
+import { MaxWidthWrapper } from "./MaxWidthWrapper";
 
 export const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -24,14 +24,13 @@ export const Navbar = () => {
             scrolled && "bg-neutral-900/95 backdrop-blur-lg border-b border-neutral-800/50"
         )}>
             <MaxWidthWrapper>
-                <nav className="flex items-center justify-between">
-                    <Logo />
-                    <ul className="ml-auto flex items-center gap-4">
+                <nav className="flex items-center justify-between w-full">
+                    <Logo className="flex-1" />
+                    <ul className="flex-1 flex items-center gap-4 justify-end">
                         {/* Search */}
-                        <button />
+                        <SearchCommand />
                         <FaGithub className="size-5" />
                         <ModeToggle />
-                        
                     </ul>
                 </nav>
             </MaxWidthWrapper>
