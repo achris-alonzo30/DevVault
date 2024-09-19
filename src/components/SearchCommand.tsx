@@ -28,8 +28,8 @@ export const SearchCommand = () => {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <div className="group flex items-center justify-center text-sm font-medium justify-between bg-muted hover:text-foreground py-1 rounded-md w-1/2 px-3">
-                    <p className="text-muted-foreground group-hover:text-foreground">Search your favorite tools...</p>
+                <div className="group flex-1 flex items-center justify-center text-sm font-medium justify-between bg-muted hover:text-foreground py-1 rounded-md w-[200px] px-3">
+                    <p className="text-muted-foreground group-hover:text-foreground truncate">Search your favorite tools...</p>
                     <kbd className="font-light flex text-sm items-center gap-2 text-muted-foreground group-hover:text-foreground">
                         <span>⌘</span>
                         <span className="text-[12px] font-medium">K</span>

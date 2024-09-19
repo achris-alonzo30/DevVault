@@ -8,9 +8,9 @@ export const Logo = ({
     className?: string;
 }) => {
     return (
-        <Link href="/" className={cn("flex items-center gap-2 text-foreground", className)}>
-            <RiCodeBoxFill className="size-5 text-primary-500" />
-            <p className="text-lg font-semibold tracking-widest">DevVault</p>
+        <Link aria-label="DevVault App Logo" href="/" className={cn("flex items-center gap-2 dark:text-neutral-100 text-neutral-900", className)}>
+            <RiCodeBoxFill className="size-5" />
+            <p className="hidden sm:block text-lg font-semibold tracking-wide dark:text-neutral-100 text-neutral-900">DevVault</p>
         </Link>
     )
 }
