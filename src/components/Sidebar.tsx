@@ -1,31 +1,40 @@
 import Link from "next/link";
+
 const frontend = [
     {
         title: "UI Libraries",
+        link: "ui-libraries",
     },
     {
         title: "JavaScript Frameworks",
+        link: "javascript-frameworks",
     },
     {
         title: "Icons & Assets",
+        link: "icons-assets",
     },
     {
         title: "Animations",
+        link: "animations",
     },
     {
         title: "Forms & Validations",
+        link: "forms-validations",
     },
 ]
 
 const backend = [
     {
         title: "Databases",
+        link: "databases",
     },
     {
         title: "Authentication",
+        link: "authentication",
     },
     {
         title: "API Tools",
+        link: "api-tools",
     },
 ]
 
@@ -41,10 +50,10 @@ export const Sidebar = () => {
                         <p className="font-semibold">Frontend</p>
                         <nav className="flex flex-col gap-2">
                             {frontend.map((item, index) => (
-                                <li key={index} className="group flex items-center font-medium gap-2 dark:text-neutral-300 text-neutral-600">
+                                <Link href={`/explore?recommendation=${item.link}`} key={index} className="group flex items-center font-medium gap-2 dark:text-neutral-300 text-neutral-600">
                                     <span className="size-1 rounded-full p-1 bg-neutral-300 dark:bg-neutral-600  dark:group-hover:bg-neutral-200 group-hover:bg-neutral-800" />
                                     <span>{item.title}</span>
-                                </li>
+                                </Link>
                             ))}
 
                         </nav>
@@ -53,10 +62,10 @@ export const Sidebar = () => {
                         <p className="font-semibold">Backend</p>
                         <nav className="flex flex-col gap-2">
                             {backend.map((item, index) => (
-                                <li key={index} className="group flex items-center font-medium gap-2 dark:text-neutral-300 text-neutral-600">
+                                <Link href={`/explore?recommendation=${item.link}`} key={index} className="group flex items-center font-medium gap-2 dark:text-neutral-300 text-neutral-600">
                                     <span className="size-1 rounded-full p-1 bg-neutral-300 dark:bg-neutral-600  dark:group-hover:bg-neutral-200 group-hover:bg-neutral-800" />
                                     <span>{item.title}</span>
-                                </li>
+                                </Link>
                             ))}
                         </nav>
                     </div>
