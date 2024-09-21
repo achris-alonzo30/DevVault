@@ -11,7 +11,7 @@ export default function Explore() {
         <div className="flex flex-col min-h-screen">
             <Navbar />
             <div className="flex flex-1 overflow-hidden">
-                <Sidebar />
+                {/* <Sidebar /> */}
                 <BrowserTab />
             </div>
             <Footer />
